@@ -10,6 +10,11 @@
 .form > input {
     width: 39.875rem;
     padding: 1rem;
+
+    background: #262626;
+    color: #808080;
+    border: 1px solid #0D0D0D;
+    border-radius: 0.5rem;
 }
 
 .form input:focus {
@@ -22,7 +27,14 @@
     gap: 0.25rem;
 
     font-size: 0.875rem;
+    font-weight: 700;
 
     width: 5.625rem;
     padding: 1rem;
+
+    background: #1E6F9F;
+    color: white;
+
+    border: 0;
+    border-radius: 0.5rem;
 }
