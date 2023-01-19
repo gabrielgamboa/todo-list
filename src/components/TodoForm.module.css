@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    height: 3.25rem;
+    margin-top: calc(0px - 1.6875rem);
+}
+
+.form > input {
+    width: 39.875rem;
+    padding: 1rem;
+}
+
+.form input:focus {
+    outline:none;
+}
+
+.form > button {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+
+    font-size: 0.875rem;
+
+    width: 5.625rem;
+    padding: 1rem;
+}
