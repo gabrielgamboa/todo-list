@@ -10,6 +10,13 @@ export function App() {
         <div>
             <Header/>
             <TodoForm/>
+            <div className={styles.mainContent}>
+                <div className={styles.createdAndFinishedTodos}>
+                    <span className={styles.createdTasks}>
+                        Tarefas criadas 0</span>
+                    <span className={styles.finishedTasks}>Concluídas 0</span>
+                </div>
+            </div>
         </div>
     )
 }

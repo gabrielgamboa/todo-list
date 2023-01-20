@@ -11,9 +11,9 @@
     width: 39.875rem;
     padding: 1rem;
 
-    background: #262626;
-    color: #808080;
-    border: 1px solid #0D0D0D;
+    background: var(--gray-500);
+    color: var(--gray-300);
+    border: 1px solid var(--gray-700);
     border-radius: 0.5rem;
 }
 
@@ -32,7 +32,7 @@
     width: 5.625rem;
     padding: 1rem;
 
-    background: #1E6F9F;
+    background: var(--blue-dark);
     color: white;
 
     border: 0;
