@@ -8,12 +8,15 @@
   --blue-dark: #1E6F9F;
 
   --purple: #8284FA;
+
+  --white: #fff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
