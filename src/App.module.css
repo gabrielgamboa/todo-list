@@ -45,5 +45,12 @@
 }
 
 .emptyText {
-    line-height: 1.4rem;
+    text-align: center;
+    line-height: 140%;
+    width: 43rem;
+    height: 100px;
+}
+
+.emptyText p:first-of-type {
+    font-weight: 700;
 }
