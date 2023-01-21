@@ -6,12 +6,18 @@ import { TodoForm } from './components/TodoForm'
 import styles from "./App.module.css";
 
 import './global.module.css'
+import { useState } from 'react';
+import { EmptyTodos } from './components/EmptyTodos';
 
 export function App() {
+    const [todos, setTodos] = useState([]);
+
+    console.log(todos);
+
     return (
         <div>
-            <Header/>
-            <TodoForm/>
+            <Header />
+            <TodoForm />
             <div className={styles.mainContent}>
                 <div className={styles.createdAndFinishedTodos}>
                     <span className={styles.createdTasks}>
@@ -23,15 +29,11 @@ export function App() {
                 </div>
 
                 <div className={styles.todos}>
-                    <div className={styles.empty}>
-                       <ClipboardText size={56} />
-                       <div className={styles.emptyText}>
-                           <p> Você ainda não tem tarefas cadastradas </p>
-                           <p> Crie tarefas e organize seus itens a fazer </p>
-                       </div>
-                    </div>
+                    {todos.length === 0 ? (
+                        <EmptyTodos />
+                    ) : <h1>teste</h1>}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
