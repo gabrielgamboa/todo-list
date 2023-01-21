@@ -1,4 +1,4 @@
-import { ClipboardText } from 'phosphor-react';
+import { CheckCircle, Circle, Trash } from 'phosphor-react';
 
 import { Header } from './components/Header'
 import { TodoForm } from './components/TodoForm'
@@ -10,9 +10,12 @@ import { useState } from 'react';
 import { EmptyTodos } from './components/EmptyTodos';
 
 export function App() {
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState([1]);
+    const [checked, setChecked] = useState(false);
 
-    console.log(todos);
+    function handleChangeCheck() {
+        setChecked(!checked);
+    }
 
     return (
         <div>
@@ -29,9 +32,20 @@ export function App() {
                 </div>
 
                 <div className={styles.todos}>
-                    {todos.length === 0 ? (
-                        <EmptyTodos />
-                    ) : <h1>teste</h1>}
+                    {todos.length === 0 ?
+                        <EmptyTodos /> :
+                        <div className={styles.todo}>
+                            {checked ?
+                                <CheckCircle onClick={handleChangeCheck} className={styles.uncheckedTodo} size={24} /> :
+                                <Circle onClick={handleChangeCheck} className={styles.uncheckedTodo} size={24} />
+                            }
+                            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+                            <Trash size={24} />
+                        </div>
+                        // todos.map(todo => (
+
+                        // ));
+                    }
                 </div>
             </div>
         </div >
