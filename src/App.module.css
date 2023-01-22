@@ -33,24 +33,3 @@
     border-top: 0.0625rem solid var(--gray-400);
     border-radius: 0.5rem;
 }
-
-.todo {
-    height: 4.5rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: var(--gray-400);
-
-    display: flex;
-    gap: 0.75rem;
-    
-}
-
-.uncheckedTodo {
-    color: var(--blue);
-}
-
-.todo > p {
-    max-width: 39.5rem;
-    font-size: 0.875rem;
-    color: var(--gray-100);
-}
