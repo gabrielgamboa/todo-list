@@ -32,6 +32,8 @@
     width: 5.625rem;
     padding: 1rem;
 
+    cursor: pointer;
+
     background: var(--blue-dark);
     color: white;
 

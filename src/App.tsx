@@ -24,10 +24,20 @@ export function App() {
         }
     }
 
+    function handleCreateTodo(text: string) {
+        const newTodo = {
+            id: uuidv4(),
+            title: text,
+            isCompleted: false
+        };
+
+        setTodos([...todos, newTodo]);
+    }
+
     return (
         <div>
             <Header />
-            <TodoForm />
+            <TodoForm onCreateTodo={handleCreateTodo} />
             <div className={styles.mainContent}>
                 <div className={styles.createdAndFinishedTodos}>
                     <span className={styles.createdTasks}>
