@@ -6,6 +6,7 @@
 
   display: flex;
   gap: 0.75rem;
+  margin-bottom: 0.75rem;
   
 }
 
@@ -19,13 +20,15 @@
 }
 
 .todo .normalTitle {
-  max-width: 39.5rem;
+  word-wrap:break-word;
+  width: 39.5rem;
   font-size: 0.875rem;
   color: var(--gray-100);
 }
 
 .todo .fadedTitle {
-  max-width: 39.5rem;
+  word-wrap:break-word;
+  width: 39.5rem;
   font-size: 0.875rem;
   color: var(--gray-300);
   text-decoration: line-through;
