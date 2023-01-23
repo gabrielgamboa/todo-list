@@ -40,3 +40,8 @@
     border: 0;
     border-radius: 0.5rem;
 }
+
+.form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
