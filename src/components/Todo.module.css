@@ -37,3 +37,10 @@
   color: var(--gray-300);
   text-decoration: line-through;
 }
+
+.todo button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: 0;
+}

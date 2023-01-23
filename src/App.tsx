@@ -16,7 +16,7 @@ export function App() {
         isCompleted: false,
     }]);
 
-    function handleChangeCheck(todoId: string) {
+    function changeTodoStatus(todoId: string) {
         const todo = todos.find(todo => todo.id === todoId);
         if (todo) {
             todo.isCompleted = !todo.isCompleted;
@@ -32,6 +32,11 @@ export function App() {
         };
 
         setTodos([...todos, newTodo]);
+    }
+
+    function deleteTodo(todoId: string) {
+        const todosWithoutDeletedOne = todos.filter(todo => todo.id !== todoId);
+        setTodos(todosWithoutDeletedOne);
     }
 
     function completedTodosCount() {
@@ -61,7 +66,8 @@ export function App() {
                                 id={todo.id}
                                 title={todo.title}
                                 isCompleted={todo.isCompleted}
-                                onChangeTodoStatus={handleChangeCheck}
+                                onChangeTodoStatus={changeTodoStatus}
+                                onDeleteTodo={deleteTodo}
                             />
                         ))
                     }
