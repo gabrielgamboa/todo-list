@@ -33,3 +33,15 @@
     border-top: 0.0625rem solid var(--gray-400);
     border-radius: 0.5rem;
 }
+
+@media(max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+@media(max-width: 676px) {
+    html {
+        font-size: 73%;
+    }
+}
