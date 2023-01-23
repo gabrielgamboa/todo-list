@@ -11,7 +11,6 @@ export function TodoForm({ onCreateTodo }: TodoFormProps) {
     const [text, setText] = useState('');
 
     function handleNewText(event: ChangeEvent<HTMLInputElement>) {
-        event.target.setCustomValidity('');
         setText(event.target.value);
 
     }
@@ -22,20 +21,18 @@ export function TodoForm({ onCreateTodo }: TodoFormProps) {
         setText('');
     }
 
-    function handleInputWithError(event: InvalidEvent<HTMLInputElement>) {
-        event.target.setCustomValidity('Este campo é obrigatório!');
-    }
+
+    const isInputTextEmpty = text.length === 0;
 
     return (
         <form onSubmit={handleSubmitForm} className={styles.form}>
             <input
                 required
                 onChange={handleNewText}
-                onInvalid={handleInputWithError}
                 placeholder="Adicione uma nova tarefa"
                 type="text"
             />
-            <button>Criar <PlusCircle size={16} /></button>
+            <button disabled={isInputTextEmpty}>Criar <PlusCircle size={16} /></button>
         </form>
     )
 }
