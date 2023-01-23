@@ -24,10 +24,14 @@
   width: 39.5rem;
   font-size: 0.875rem;
   color: var(--gray-100);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .todo .fadedTitle {
   word-wrap:break-word;
+  height: 2.5rem;
   width: 39.5rem;
   font-size: 0.875rem;
   color: var(--gray-300);

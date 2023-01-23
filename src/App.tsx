@@ -34,6 +34,10 @@ export function App() {
         setTodos([...todos, newTodo]);
     }
 
+    function completedTodosCount() {
+        return todos.filter(todo => todo.isCompleted).length;
+    }
+
     return (
         <div>
             <Header />
@@ -41,10 +45,10 @@ export function App() {
             <div className={styles.mainContent}>
                 <div className={styles.createdAndFinishedTodos}>
                     <span className={styles.createdTasks}>
-                        Tarefas criadas <span className={styles.counter}>0</span>
+                        Tarefas criadas <span className={styles.counter}>{todos.length}</span>
                     </span>
                     <span className={styles.finishedTasks}>
-                        Concluídas <span className={styles.counter}>0</span>
+                        Concluídas <span className={styles.counter}>{completedTodosCount()} de {todos.length}</span>
                     </span>
                 </div>
 
