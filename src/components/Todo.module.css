@@ -44,4 +44,5 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+  color: var(--gray-300);
 }
