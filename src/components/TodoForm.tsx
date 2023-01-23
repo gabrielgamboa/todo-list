@@ -11,8 +11,8 @@ export function TodoForm({ onCreateTodo }: TodoFormProps) {
     const [text, setText] = useState('');
 
     function handleNewText(event: ChangeEvent<HTMLInputElement>) {
-        setText(event.target.value);
 
+        setText(event.target.value);
     }
 
     function handleSubmitForm(event: FormEvent) {
@@ -21,13 +21,13 @@ export function TodoForm({ onCreateTodo }: TodoFormProps) {
         setText('');
     }
 
-
     const isInputTextEmpty = text.length === 0;
 
     return (
         <form onSubmit={handleSubmitForm} className={styles.form}>
             <input
                 required
+                value={text}
                 onChange={handleNewText}
                 placeholder="Adicione uma nova tarefa"
                 type="text"

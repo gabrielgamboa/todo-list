@@ -1,5 +1,4 @@
 .todo {
-  height: 4.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
   background: var(--gray-400);
@@ -31,7 +30,6 @@
 
 .todo .fadedTitle {
   word-wrap:break-word;
-  height: 2.5rem;
   width: 39.5rem;
   font-size: 0.875rem;
   color: var(--gray-300);
